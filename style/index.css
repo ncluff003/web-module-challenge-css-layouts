@@ -86,6 +86,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 html {
@@ -95,7 +96,7 @@ html {
 }
 
 body {
-  box-sizing: border-box;
+  box-sizing: inherit;
   position: relative;
   height: 100%;
   width: 100vw;
@@ -348,4 +349,64 @@ footer .connection-container a {
 footer .connection-container a:hover {
   cursor: pointer;
   color: #fefefe;
+}
+
+@media (max-width: 800px) {
+  header {
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  header .heading-container {
+    flex-direction: column;
+    height: max-content;
+  }
+
+  header .heading-container .name {
+    align-self: center;
+  }
+  header .heading-container .navigation {
+    height: max-content;
+    width: 100%;
+    flex-direction: column;
+    margin: 5rem 0;
+  }
+
+  header .heading-container .navigation .links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .heading-container .navigation .links .link {
+    margin: 2rem 0 0 0;
+  }
+
+  header .hero-container {
+    width: 90%;
+    height: auto;
+  }
+
+  .projects-container {
+    flex-flow: row wrap;
+    height: max-content;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .projects-container__project {
+    width: 45%;
+  }
+
+  .projects-container__project .project-image-container {
+    width: 100%;
+  }
+
+  .projects-container__project .project-image-container img {
+    width: 100%;
+    height: auto;
+  }
+  footer {
+    width: 100%;
+  }
 }
