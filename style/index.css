@@ -387,6 +387,10 @@ footer .connection-container a:hover {
     height: auto;
   }
 
+  header .hero-container .title {
+    font-size: 6rem;
+  }
+
   .projects-container {
     flex-flow: row wrap;
     height: max-content;
@@ -407,6 +411,38 @@ footer .connection-container a:hover {
     height: auto;
   }
   footer {
+    width: 100%;
+    padding: 0rem;
+  }
+  footer .connection-container {
+    height: 25%;
+  }
+
+  footer .connection-container:first-of-type {
+    margin-top: 2rem;
+  }
+
+  footer .connection-container:last-of-type {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  header .hero-container .title {
+    font-size: 4rem;
+  }
+
+  .projects-container {
+    flex-flow: row wrap;
+    height: max-content;
+  }
+
+  .projects-container__project {
+    width: 45%;
+  }
+
+  footer .connection-container {
+    height: 30%;
     width: 100%;
   }
 }
